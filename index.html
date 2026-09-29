@@ -17,8 +17,9 @@
     color: white;
     font-family: "Consolas", "Courier New", monospace;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 30px 20px;
     padding-top: calc(30px + env(safe-area-inset-top, 0px));
     padding-bottom: calc(30px + env(safe-area-inset-bottom, 0px));
@@ -27,6 +28,7 @@
     max-width: 500px;
     width: 100%;
     text-align: center;
+    margin: auto; /* Centre le contenu verticalement entre le haut et le footer */
   }
   .face {
     font-size: 60px;
@@ -49,9 +51,19 @@
     opacity: 0.85;
     word-break: break-word;
   }
- .bouton { 
-  display: inline-block; padding: 4px 8px; text-decoration: none; 
- }
+  footer {
+    width: 100%;
+    text-align: center;
+    font-size: 12px; /* Texte plus petit mais lisible */
+    opacity: 0.8;    /* Discret */
+  }
+  .bouton { 
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    text-decoration: none;
+    margin-left: 4px;
+  }
 </style>
 </head>
 <body>
@@ -70,13 +82,14 @@
       Code erreur : CROISSANTAGE² &nbsp;by Zack1408
     </div>
   </div>
- <footer>
-  <small>
-   @Zack140821 © — Tous droits réservés.
-   <a class="bouton" href="https://github.com">
-  <img src="asset/gitlogo" alt="" width="14">
-  </a>
-  </small>
- </footer>
+
+  <footer>
+    <small>
+      @Zack140821 © — Tous droits réservés.
+      <a class="bouton" href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <img src="asset/gitlogo.png" alt="GitHub" width="14">
+      </a>
+    </small>
+  </footer>
 </body>
 </html>
